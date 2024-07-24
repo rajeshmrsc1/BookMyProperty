@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.BookMyProperty.Model.Property;
 
-public interface Propertyirepos extends JpaRepository<Property, Integer>{
+public interface Propertyirepos extends JpaRepository<Property, Long>{
 
 	
 	
