@@ -26,7 +26,7 @@ public class Sale {
 	@Column
 	@Temporal(TemporalType.DATE)
 	private Date dateOfSale;
-	private Double salePrice;
+	private Long  salePrice;
 
 	@OneToOne
 	@JoinColumn(name = "property_id")
@@ -34,11 +34,10 @@ public class Sale {
 
 	@ManyToOne
 	@JoinColumn(name = "buyer_id")
-
 	private Buyer buyer;
 
 	@ManyToOne
-	@JoinColumn(name = "agentid")
+	@JoinColumn(name = "agent_id")
 	private Agent agent;
 
 }

@@ -48,9 +48,8 @@ public class PropertyRestController {
 	@PutMapping(value = "/{PropertyId}")
 	public Property UpdatePropertyDetailsById(@RequestBody Property prop, @PathVariable Long  PropertyId) {
 		prop.setPropertyId(PropertyId);
-		System.out.println(" Update Property Details successfully   ");
 		System.out.println(" RestController running with put mapping url  ");
-		return propiserv.SaveNewProperty(prop);
+		return propiserv.UpdatePropertyDetails(prop);
 
 	}
 

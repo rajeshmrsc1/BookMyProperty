@@ -14,4 +14,6 @@ public interface SaleiServices {
 
 	public void DeleteSaleById(Long saleId);
 
+	public Sale UpdateSaleDetails(Sale sal);
+
 }

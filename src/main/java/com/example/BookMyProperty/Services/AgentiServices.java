@@ -14,7 +14,7 @@ public interface AgentiServices {
 
 		public void DeleteAgentById(Long AgentId );
 
-		// public Agent UpdateAgentDetails(Agent AgentId );
+		public Agent UpdateAgentDetails(Agent AgentId );
 	    
 	
 	

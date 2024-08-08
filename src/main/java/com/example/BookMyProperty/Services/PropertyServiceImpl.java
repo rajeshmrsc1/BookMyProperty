@@ -44,6 +44,13 @@ public class PropertyServiceImpl implements PropertyiServices {
 
 	}
 
+	@Override
+	public Property UpdatePropertyDetails(Property prop) {
+		System.out.println(" property  Updated  successfully ");
+		return propirepo.save(prop);
+
+	}
+
 //	@Override
 //	public Property UpdatePropertyDetailsById(Property prop, Integer id) {
 //		Optional<Property> existingProperty = propirepo.findById(id);

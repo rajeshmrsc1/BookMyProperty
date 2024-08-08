@@ -14,4 +14,8 @@ public interface BuyeriServices {
 
 	public void DeleteBuyerById(Long BuyerId);
 
+	public Buyer UpdateBuyerDetails(Buyer buy );
+	
+	
+	
 }

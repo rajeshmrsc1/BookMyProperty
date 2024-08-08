@@ -38,4 +38,10 @@ public class BuyerServiceImpl implements BuyeriServices {
 		brepo.deleteById(BuyerId);
 	}
 
+	@Override
+	public Buyer UpdateBuyerDetails(Buyer buy) {
+		System.out.println(" Buyer Detail Updated successfully ");
+		return brepo.save(buy);
+	}
+
 }

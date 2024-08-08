@@ -38,10 +38,10 @@ public class AgentServiceImpl implements AgentiServices {
 		atrepo.deleteById(AgentId);
 	}
 
-//	@Override
-//	public Agent UpdateAgentDetails(Agent agt) {
-//		System.out.println("agent record updated successfully   ");
-//		return atrepo.save(agt);
-//	}
+   @Override
+	public Agent UpdateAgentDetails(Agent agt) {
+		System.out.println("agent record updated successfully   ");
+		return atrepo.save(agt);
+	}
 
 }

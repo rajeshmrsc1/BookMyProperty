@@ -44,7 +44,7 @@ public class BuyerRestController {
 	public Buyer UpdateBuyerDetail(@RequestBody Buyer buy, @PathVariable Long Buyerid) {
 		System.out.println("Put mapping running in BuyerRestController");
 		buy.setBuyerID(Buyerid);
-		return biserv.SaveNewBuyer(buy);
+		return biserv.UpdateBuyerDetails(buy);
 	}
 
 	@DeleteMapping(value = "/{BuyerId}")

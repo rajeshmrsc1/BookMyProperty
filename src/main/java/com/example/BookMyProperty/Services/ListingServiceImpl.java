@@ -39,6 +39,12 @@ public class ListingServiceImpl implements ListingiServices {
 	    lsrp.deleteById(ListingId);
 	}
 
+	@Override
+	public Listing UpdateListingDetails(Listing lis) {
+		System.out.println(" ListingId   Property Record Updated ");
+		return lsrp.save(lis);
+	}
+
 	
 	
 	

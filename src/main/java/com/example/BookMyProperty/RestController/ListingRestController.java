@@ -16,7 +16,7 @@ import com.example.BookMyProperty.Model.Listing;
 import com.example.BookMyProperty.Services.ListingiServices;
 
 @RestController
-@RequestMapping(value = "/api/listging")
+@RequestMapping(value = "/api/listing")
 public class ListingRestController {
 
 	@Autowired
@@ -42,13 +42,13 @@ public class ListingRestController {
 	
 	
 	@PutMapping(value = "/{ListingId}")
-	public Listing updateListingDetailById(@RequestBody Listing list, Long ListingId) {
+	public Listing updateListingDetailById(@RequestBody Listing list, @PathVariable Long ListingId) {
 		list.setListingId(ListingId);
 		System.out.println("put mapping run  in Restcontroller ");
-		return lis.SaveNewListing(list);
+		return lis.UpdateListingDetails(list);
 	}
      @DeleteMapping(value="/{ListingId}")
-	public void DeleteListingById(Long ListingId) {
+	public void DeleteListingById(@PathVariable Long ListingId) {
 		System.out.println(" Delete mapping run  in Restcontroller ");
 	    lis.DeleteListingById(ListingId);
 	}

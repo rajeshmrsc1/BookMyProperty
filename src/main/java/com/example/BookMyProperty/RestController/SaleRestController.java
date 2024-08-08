@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.BookMyProperty.Model.Sale;
-
 import com.example.BookMyProperty.Services.SaleiServices;
 
 @RestController
@@ -21,6 +20,7 @@ import com.example.BookMyProperty.Services.SaleiServices;
 public class SaleRestController {
 	@Autowired
 	SaleiServices sali;
+	
 
 	@GetMapping
 	public List<Sale> FindAllSale() {
@@ -36,14 +36,14 @@ public class SaleRestController {
 
 	@PostMapping
 	public Sale SaveNewSale(@RequestBody Sale sal) {
-		System.out.println("Post mapping run in Sale restconroller ");
+		System.out.println("Post mapping run in Sale restconroller "+ sal);
 		return sali.SaveNewSale(sal);
 	}
      @PutMapping(value = "/{saleId}")
 	public Sale UpdateSaleDetail(@RequestBody Sale sal, @PathVariable Long saleId) {
 		sal.setSaleID(saleId);
 		System.out.println("Put mapping run in Sale restconroller ");
-		return sali.SaveNewSale(sal);
+		return sali.UpdateSaleDetails(sal);
 	}
      @DeleteMapping(value = "/{saleId}")
 	public void DeleteSaleById(@PathVariable Long saleId) {

@@ -43,7 +43,7 @@ public class AgentRestController {
 	public Agent UpdateAgentDetails(@PathVariable Long AgentId, @RequestBody Agent agt) {
 		agt.setAgentId(AgentId);
 		System.out.println("Put  mapping is run in Agent restcontroller  ");
-		return aiserv.SaveNewAgent(agt);
+		return aiserv.UpdateAgentDetails(agt);
 	}
 
 	@DeleteMapping(value = "/{AgentId}")

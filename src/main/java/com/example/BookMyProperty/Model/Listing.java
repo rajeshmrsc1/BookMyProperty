@@ -19,17 +19,18 @@ import lombok.Data;
 @Table(name = "Listing Details")
 
 public class Listing {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Long listingId;
-@Temporal(TemporalType.DATE)	
+	@Temporal(TemporalType.DATE)
 	private Date dateListed;
 	private Long price;
 
 	@OneToOne
 	@JoinColumn(name = "property_id")
 	private Property property;
+
 	@ManyToOne
 	@JoinColumn(name = "agent_id")
 	private Agent agent;

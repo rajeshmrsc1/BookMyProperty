@@ -16,14 +16,12 @@ public interface PropertyiServices {
 
 	public void DeletePropertyByPropertyId(Long  PropertyId);
 
-	
+  public Property UpdatePropertyDetails(Property prop);
 
-	
-
-	
-	
-//public Property UpdatePropertyDetails(Integer id,Property prop);
-// public Property UpdatePropertyDetailsById(Property prop, Integer id);
+  
+  
+  
+  // public Property UpdatePropertyDetailsById(Property prop, Integer id);
 //	List<Property> getpropertyByPropertyAddress(String PropertyAddress);
 //	List<Property> getpropertyByCity(String City,);
 

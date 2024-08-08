@@ -12,11 +12,11 @@ import com.example.BookMyProperty.Repo.Saleirepo;
 public class SaleServiceImpl implements SaleiServices {
 	@Autowired
 	Saleirepo sirepo;
-
+	
 	@Override
 	public Sale SaveNewSale(Sale sal) {
 		System.out.println("new sale Registred ");
-		return sirepo.save(sal);
+		return sirepo.saveAndFlush(sal);
 
 	}
 
@@ -36,6 +36,12 @@ public class SaleServiceImpl implements SaleiServices {
 	public void DeleteSaleById(Long saleId) {
 		System.out.println(" saleID record Deleted Syuccessfully ");
 		sirepo.deleteById(saleId);
+	}
+
+	@Override
+	public Sale UpdateSaleDetails(Sale sal) {
+		System.out.println(" saleID record Updateed Successfully ");
+		return sirepo.save(sal);
 	}
 
 }

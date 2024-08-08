@@ -14,6 +14,7 @@ public interface ListingiServices {
 
 	public void DeleteListingById(Long ListingId);
 
+	public Listing UpdateListingDetails(Listing lis );
 	
 	
 }
